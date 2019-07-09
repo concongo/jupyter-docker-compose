@@ -1,7 +1,7 @@
 # Jupyter with Docker Compose
 
 This repository contains a simple docker-compose definition for launching the popular Jupyter Data Science Notebook.
-You can define a password with the script ```create_token.py -p S-E-C-R-E-T-O`` and generate SSL certificates as described below.
+You can define a password with the script ```create_token.py -p S-E-C-R-E-T-O``` and generate SSL certificates as described below.
 
 ## Control the container:
 
