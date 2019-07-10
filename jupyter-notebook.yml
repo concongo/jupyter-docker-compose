@@ -12,4 +12,5 @@ services:
       container_name:   jupyter_notebook
       command: "start-notebook.sh \
         --NotebookApp.password=${ACCESS_TOKEN} \
-        --NotebookApp.certfile=/etc/ssl/notebook/jupyter.pem"
+        --NotebookApp.certfile=/etc/ssl/notebook/cert.pem
+        --NotebookApp.keyfile=/etc/ssl/notebook/privkey.pem
