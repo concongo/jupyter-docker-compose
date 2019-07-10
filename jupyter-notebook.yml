@@ -13,4 +13,4 @@ services:
       command: "start-notebook.sh \
         --NotebookApp.password=${ACCESS_TOKEN} \
         --NotebookApp.certfile=/etc/ssl/notebook/cert.pem
-        --NotebookApp.keyfile=/etc/ssl/notebook/privkey.pem
+        --NotebookApp.keyfile=/etc/ssl/notebook/privkey.pem"
