@@ -1,5 +1,18 @@
 version:  '3'
 services:
+  selenium-hub:
+    image: selenium/hub:3.141.59-dubnium
+    ports:
+    - "4444:4444"
+  chrome:
+    image: selenium/node-chrome:3.141.59-dubnium
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
   datascience-notebook:
       image:   ${IMAGE_NAME}
       volumes:
@@ -14,3 +27,6 @@ services:
         --NotebookApp.password=${ACCESS_TOKEN} \
         --NotebookApp.certfile=/etc/ssl/notebook/cert.pem
         --NotebookApp.keyfile=/etc/ssl/notebook/privkey.pem"
+      restart: always
+      depends_on:
+        - chrome
