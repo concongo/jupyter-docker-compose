@@ -23,6 +23,8 @@ services:
       ports:
         - ${PORT}:8888
       container_name:   jupyter_notebook
+      user: root
+      GRANT_SUDO: "yes"
       command: "start-notebook.sh \
         --NotebookApp.password=${ACCESS_TOKEN} \
         --NotebookApp.certfile=/etc/ssl/notebook/cert.pem
