@@ -23,7 +23,7 @@ services:
       ports:
         - ${PORT}:8888
       container_name:   jupyter_notebook
-      user: root
+      user: jovyan
       environment:
         GRANT_SUDO: "yes"
       command: "start-notebook.sh \
