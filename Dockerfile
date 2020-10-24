@@ -14,6 +14,10 @@ USER root
 # R pre-requisites
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
+    sox \
+    ffmpeg \
+    libcairo2 \
+    libcairo2-dev \
     fonts-dejavu \
     gfortran \
     gcc && \
