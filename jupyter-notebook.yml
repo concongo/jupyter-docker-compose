@@ -25,7 +25,7 @@ services:
       container_name:   jupyter_notebook
       user: jovyan
       environment:
-        GRANT_SUDO: yes
+        - GRANT_SUDO=${GRANT_SUDO}
       command: "start-notebook.sh \
         --NotebookApp.password=${ACCESS_TOKEN} \
         --NotebookApp.certfile=/etc/ssl/notebook/cert.pem
