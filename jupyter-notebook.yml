@@ -27,6 +27,7 @@ services:
       environment:
         - GRANT_SUDO=${GRANT_SUDO}
       command: "start-notebook.sh \
+        -e GRANT_SUDO=yes \
         --NotebookApp.password=${ACCESS_TOKEN} \
         --NotebookApp.certfile=/etc/ssl/notebook/cert.pem
         --NotebookApp.keyfile=/etc/ssl/notebook/privkey.pem"
