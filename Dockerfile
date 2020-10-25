@@ -18,6 +18,7 @@ RUN apt-get update && \
     ffmpeg \
     libcairo2 \
     libcairo2-dev \
+    texlive-full \
     fonts-dejavu \
     gfortran \
     gcc && \
