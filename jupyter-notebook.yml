@@ -14,7 +14,10 @@ services:
       - HUB_HOST=selenium-hub
       - HUB_PORT=4444
   datascience-notebook:
-      image:   ${IMAGE_NAME}
+      build:
+        context: .
+        dockerfile: Dockerfile
+      image:   ${IMAGE_NAME}_bld
       volumes:
         - ${LOCAL_WORKING_DIR}:/home/jovyan/work
         - ${LOCAL_DATASETS}:/home/jovyan/work/datasets
